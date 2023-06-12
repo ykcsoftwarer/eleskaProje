@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+/* ***************** NAVBAR *****************   */
+.down-icon::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 10;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+}
+
+/* ***************** HEADER *****************   */
+.bgc-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 35px);
+  background-image: url("./helper/headerPizza.jpg");
+}
+
+.header-title-font {
+  font-family: "Oswald", sans-serif;
+}
+.inputBoxShadow {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.word-spacing {
+  word-spacing: 0.3rem;
+}
+
+/* ***************** PİZZA *****************   */
+.orbit-container {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.orbit {
+  display: flex;
+
+  z-index: 5;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+}
+
+.circle-container {
+  position: relative;
+  width: 100rem;
+  height: 35rem;
+  list-style-type: none;
+
+  border-bottom: none;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  display: grid;
+  place-items: center;
+  bottom: 0px;
+  padding: 50px 50px 0px 50px;
+  background-position: unset;
+  
+}
+
+/* ***************** Slider *****************   */
+@layer components {
+  .abcd {
+    @apply mb-10
+      -mt-14
+      bg-white
+      w-[70%]
+      h-[400px]
+      flex
+      justify-center
+      items-center
+      
+      rounded-[3rem]
+      shadow-sliderShadow;
+  }
+  #main-slider-container {
+    @apply w-[92%]
+          h-[305px]
+          relative
+          flex
+          items-center;
+  }
+
+  #slider {
+    @apply w-full
+          h-full      
+          whitespace-nowrap          
+          overflow-x-hidden
+          overflow-y-hidden 
+          scroll-smooth;
+  }
+
+  .slider-icon.left,
+  .slider-icon.right {
+    @apply bg-white
+      rounded-full
+      absolute
+      opacity-50;
+  }
+  .slider-icon.left:hover,
+  .slider-icon.right:hover {
+    @apply opacity-100 cursor-pointer shadow-Cs duration-300;
+  }
+  .slider-icon.left {
+    @apply left-0;
+  }
+  .slider-icon.right {
+    @apply right-0;
+  }
+
+  .slider-card {
+    @apply w-[250px]
+       h-[300px]
+       bg-white
+       rounded-[10px]
+       inline-block
+       mx-[2rem];
+  }
+  .slider-card-image {
+    @apply w-full
+          h-[210px]
+          bg-gray-600
+          rounded-t-[10px]
+          bg-cover;
+  }
+  .slider-content {
+    @apply flex flex-col items-center;
+  }
+  .slider-card-title {
+    @apply text-center my-2 font-medium;
+  }
+  .slider-card-button {
+    @apply py-1 border-solid border-2 border-gray-500 w-full;
+  }
+}
+
+/* Category Card style */
+
+.category-card{
+  @apply
+   w-[300px]
+   h-[300px]
+   bg-white
+   inline-block
+   mx-[1rem]
+}
+.category-card-image{
+  @apply
+      w-full
+      h-[210px]
+      bg-gray-600
+      bg-cover
+}
