@@ -7,7 +7,7 @@ import clock from "../../helper/time.png";
 const About = () => {
   return (
     <div className="flex justify-between h-screen  w-[100vw] ">
-      <div className="About-left w-1/2 relative pl-10  mdx:w-[50vw] mdx:h[50vh]">
+      <div className="About-left w-1/2 relative pl-10  md:w-[50vw] md:h[50vh]">
         <img
           src={cook}
           className="py-6 px-10 h-[100vh]    object-cover"
@@ -22,14 +22,14 @@ const About = () => {
           <h2 className=" font-roboto w-[50vw]  mb-3 text-5xl text-left xxls:text-8xl ">
             Eleska Pizza Restaurantı
           </h2>
-          <p className="font-open-sans text-left w-[40vw] mdx:w-[300px] text-gray-600 mr-60 text-xl leading-10 xxls:text-4xl  ">
+          <p className="font-open-sans text-left w-[40vw] md:w-[300px] text-gray-600 mr-60 text-xl leading-10 xxls:text-4xl  ">
             2000 yılında pizza servisine başlayan Eleska,2023 yılı itibari ile
             Türkiye'nin her yerinde şube açmıştır.Hala ilk günkü istek ve
             heyecanla en lezzetli pizzaları müşterilerimize sunabilmek için
             çalışıyoruz.
           </p>
 
-          <div className="flex justify-between mdx:mt-8 range:justify-around ">
+          <div className="flex justify-between md:mt-8 lg:justify-around ">
             <div className="inline xxls:mt-10 h-12 my-4">
               <img className="w-8 inline " src={location} alt="" />
               <p className=" inline text-3xl text-gray-600 xxls:text-4xl">
@@ -43,7 +43,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex justify-between mb-5 range:justify-around ">
+          <div className="flex justify-between mb-5 lg:justify-around ">
             <p className=" text-xl text-gray-600 xxls:text-4xl">
               📞+1(234)567-8910
             </p>
