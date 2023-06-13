@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky p-7 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap">
+      <nav className="sticky p-4 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap xsm:text-xs">
         <div className=" flex-wrap ">
           <div className="flex items-center justify-between  gap-2   ">
             <div className="flex items-center justify-start gap-x-6 ">
@@ -50,21 +50,21 @@ const Navbar = () => {
               </button>
 
               <div className="flex w-full ">
-                <a href="">                  
-                  <span className="self-center text-xl font-semibold sm:text-xl whitespace-nowrap text-white">
+                <Link to="/">
+                  <span className="self-center text-xl font-semibold sm:text-xl whitespace-nowrap text-white sm:hidden">
                     DOLGE VİTA
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 
             <div className=" xl:ml-44">
-              <div className=" flex justify-center items-center lg:gap-2 text-white text-xl border-b-2 ">
-                <CiGps />
+              <div className=" flex justify-center items-center lg:gap-2 text-white text-lg  ">
+                <CiGps className="mr-1" />
                 <button
                   id="dropdownDefaultButton"
                   data-dropdown-toggle="dropdown"
-                  className="text-white bg-transparent font-medium rounded-lg text-xl text-center inline-flex items-center"
+                  className="text-white bg-transparent font-medium rounded-lg text-base text-center inline-flex items-center sm:text-sm"
                   type="button"
                 >
                   Adres Seç
@@ -132,10 +132,20 @@ const Navbar = () => {
 
             <div className="flex items-center">
               <div className="flex gap-6 items-center">
-                <div className="smx:hidden sm:hidden lg:flex gap-6 text-white text-xl  ">
-                  {navbarMenü.map((items) => (
-                    <Link>{items}</Link>
+                <div className=" md:hidden lg:flex gap-6 text-white text-base  ">
+                  {navbarMenü.map((items, index) => (
+                    <Link className="px-2">{items}</Link>
                   ))}
+
+                  {/* <ul>
+                    {navbarMenü.map((item, index) => (
+                      <li key={index}>
+                        <a href={`/${item.toLowerCase().replace(" ", "-")}`}>
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul> */}
                 </div>
 
                 <div className=" relative text-white  " role="button">

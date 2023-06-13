@@ -7,64 +7,64 @@
 // import resim7 from "../assets/image/people.png";
 // import resim8 from "../assets/image/makarna.png";
 
-const Menü = () => {
+const Circles = () => {
   const Materials = [
     {
       id: "1",
       name: "Hızlı Kahvaltı",
-      img: "assest/kahvalti.png",
+      img: "assest/story/kahvalti.png",
     },
 
     {
       id: "2",
       name: "Atıştırmalık  ",
-      img: "assest/patates.png",
+      img: "assest/story/patates.png",
     },
 
     {
       id: "3",
       name: "Pizza Partisi",
-      img: "assest/pizza.png",
+      img: "assest/story/pizza.png",
     },
 
     {
       id: "4",
       name: "Salata Sevenler",
-      img: "assest/salata.png",
+      img: "assest/story/salata.png",
     },
 
     {
       id: "5",
       name: "Gece Acıktıysan",
-      img: "assest/gece.png",
+      img: "assest/story/gece.png",
     },
 
     {
       id: "6",
       name: "Tek Kişilik Menüler",
-      img: "assest/person.png",
+      img: "assest/story/person.png",
     },
 
     {
       id: "7",
       name: "Üç Kişilik Menüler",
-      img: "assest/people.png",
+      img: "assest/story/people.png",
     },
 
     {
       id: "8",
       name: "Makarna Severler",
-      img: "assest/makarna.png",
+      img: "assest/story/makarna.png",
     },
   ];
 
   return (
-    <section className="flex justify-center items-center h-40 ">
+    <section className="flex justify-center items-center mt-10 sm:mt-0 flex-wrap  ">
       <div className="">
-        <div className="flex justify-center items-start gap-3 flex-wrap  ">
+        <div className="flex justify-center items-start gap-10 flex-wrap  ">
           {Materials.map((material) => {
             return (
-              <div className="flex flex-col justify-between items-center  ">
+              <div className="flex flex-col justify-between items-center sm:col-auto  ">
                 <img
                   className=" w-16 border-2 p-3 border-gray-600 border-solid rounded-full"
                   src={material.img}
@@ -82,4 +82,4 @@ const Menü = () => {
   );
 };
 
-export default Menü;
+export default Circles;
