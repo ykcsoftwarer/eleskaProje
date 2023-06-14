@@ -4,13 +4,13 @@ import location from "../../helper/local.png";
 import stars from "../../helper/star.png";
 import clock from "../../helper/time.png";
 
-const About = () => {
+const AboutC = () => {
   return (
     <div className="flex justify-between h-screen  w-[100vw] ">
       <div className="About-left w-1/2 relative pl-10  md:w-[50vw] md:h[50vh]">
         <img
           src={cook}
-          className="py-6 px-10 h-[100vh]    object-cover"
+          className="py-6 px-10 h-[90vh]    object-cover"
           alt=""
         />
         <div className="bg-red-600 h-60 w-20 absolute left-0 bottom-48"></div>
@@ -56,17 +56,17 @@ const About = () => {
             </div>
           </div>
 
-          <button className="bg-white hover:bg-gray-100 w-40  text-gray-800 font-semibold mb-5  py-2 px-4 border border-red-400  shadow block  xxls:text-4xl xxls:w-80">
+          {/* <button className="bg-white hover:bg-gray-100 w-40  text-gray-800 font-semibold mb-5  py-2 px-4 border border-red-400  shadow block  xxls:text-4xl xxls:w-80">
             MENÜ
-          </button>
+          </button> */}
 
-          <button className="bg-white hover:bg-gray-100 w-40 text-gray-800 font-semibold py-2 px-4 border border-black  shadow block  xxls:text-4xl xxls:w-80">
+          {/* <button className="bg-white hover:bg-gray-100 w-40 text-gray-800 font-semibold py-2 px-4 border border-black  shadow block  xxls:text-4xl xxls:w-80">
             HAKKIMIZDA
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default AboutC;

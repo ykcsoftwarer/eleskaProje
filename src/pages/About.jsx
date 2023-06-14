@@ -1,13 +1,14 @@
 import React from "react";
+import AboutC from "../components/aboutC/AboutC";
 import Circles from "../components/circles/Circles";
 
-
-const Menu = () => {
+const About = () => {
   return (
     <>
+      <AboutC />
       
     </>
   );
 };
 
-export default Menu;
+export default About;

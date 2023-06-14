@@ -17,7 +17,7 @@ module.exports = {
         sm: { max: "639px" },
         md: { max: "769px" },
         lg: { min: "770px", max: "1024px" },
-        xl: { max: "1536" },
+        xl: { min: "1025px" },
       },
       boxShadow: {
         Cs: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
