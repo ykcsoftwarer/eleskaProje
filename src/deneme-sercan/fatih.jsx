@@ -2,7 +2,10 @@ import React from 'react'
 
 const fatih = () => {
   return (
-    <div>fatih</div>
+    <div>fatih
+        deneme wadawdmadwipawd
+    
+    </div>
   )
 }
 
