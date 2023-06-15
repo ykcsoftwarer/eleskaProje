@@ -3,7 +3,6 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
-
 /* ***************** NAVBAR *****************   */
 .down-icon::before {
   content: "";
@@ -68,7 +67,6 @@
   bottom: 0px;
   padding: 50px 50px 0px 50px;
   background-position: unset;
-  
 }
 
 /* ***************** Slider *****************   */
@@ -149,18 +147,80 @@
 
 /* Category Card style */
 
-.category-card{
-  @apply
-   w-[300px]
+.category-card {
+  @apply w-[300px]
    h-[300px]
    bg-white
    inline-block
-   mx-[1rem]
+   mx-[1rem];
 }
-.category-card-image{
-  @apply
-      w-full
+.category-card-image {
+  @apply w-full
       h-[210px]
       bg-gray-600
-      bg-cover
+      bg-cover;
+}
+
+/********* Multi Stepper ******/
+
+.details__wrapper {
+  max-width: 550px;
+  margin: 2rem auto 0.5rem auto;
+}
+.form__item {
+  margin-bottom: 1.6em;
+}
+label,
+input {
+  display: block;
+  width: 100%;
+}
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.input__error input {
+  border-color: #e12a32;
+}
+.error__feedback {
+  color: #e12a32;
+}
+
+.steps {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.ant-steps-item-icon {
+  background-color: #e12a32 !important;
+  color: white !important;
+  border: 1px solid white !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ant-steps-item-icon svg {
+  color: white !important;
+}
+
+.ant-steps-item-icon span {
+  color: white !important;
+}
+
+.ant-steps-item-container > .ant-steps-item-tail::after {
+  background-color: red !important;
+}
+
+.ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title::after {
+  background-color: red !important;
 }

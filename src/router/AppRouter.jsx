@@ -4,11 +4,13 @@ import Home from "../pages/Home";
 import Footer from "../components/footer/Footer";
 import Menu from "../pages/Menu";
 import About from "../pages/About";
+import MultiStepForm from "../components/stepper/MultiStepForm";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Navbar />
+      <MultiStepForm />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
