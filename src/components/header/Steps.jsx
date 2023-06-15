@@ -36,7 +36,7 @@ const Steps = () => {
             Tek Tıkla Kapında
             </h5>
             <p>
-                Sparişini en kısa sürede teslim etmek için yola çıkıyoruz.
+                Siparişini en kısa sürede teslim etmek için yola çıkıyoruz.
             </p>
           </div>
         </div>

@@ -39,46 +39,46 @@ const Orbit = ({ radius }) => {
   };
   return (
     <>
-    <div className=" h-[80vh] self-center">
-      <div className="flex justify-center">
-        <div className=" relative  h-[510px] w-[1100px] ">
-          <img
-            className="w-96 circle-container left-0 mx-auto  rounded-full"
-            src={pizza}
-            alt="imic"
-          />
-          <div className="relative -bottom-16 ">
-            {orbits.map((orbit, index) => (
-              <div
-                key={index}
-                className={getOrbitClassName(index)}
-                style={{
-                  bottom: orbit.y,
-                  right: orbit.x,
-                  marginRight: 540,
-                  marginBottom: 150,
-                }}
-              >
-                <div className="hover:text-2xl hover:cursor-pointer text-xl">
-                  <Popup
-                    trigger={
-                      <p className="w-44 font-bold font-sans ">
-                        {menu[orbit.menuItem].title}
-                      </p>
-                    }
-                    position="center center"
-                    className=" "
-                  >
-                    <Modal menu={menu[orbit.menuItem].title} />
-                  </Popup>
+      <div className=" h-[80vh] self-center">
+        <div className="flex justify-center">
+          <div className=" relative  h-[510px] w-[1100px] ">
+            <img
+              className="w-96 circle-container left-0 mx-auto  rounded-full"
+              src={pizza}
+              alt="imic"
+            />
+            <div className="relative -bottom-16 ">
+              {orbits.map((orbit, index) => (
+                <div
+                  key={index}
+                  className={getOrbitClassName(index)}
+                  style={{
+                    bottom: orbit.y,
+                    right: orbit.x,
+                    marginRight: 540,
+                    marginBottom: 150,
+                  }}
+                >
+                  <div className="hover:text-2xl hover:cursor-pointer text-xl">
+                    <Popup
+                      trigger={
+                        <p className="w-44 font-bold font-sans ">
+                          {menu[orbit.menuItem].title}
+                        </p>
+                      }
+                      position="center center"
+                      className=" "
+                    >
+                      <Modal menu={menu[orbit.menuItem].title} />
+                    </Popup>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    {/* <Slider/> */}
+      {/* <Slider/> */}
     </>
   );
 };

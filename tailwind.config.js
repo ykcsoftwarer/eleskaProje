@@ -7,17 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        red: {
+          primary: "#E12A32",
+        },
+      },
       screens: {
-       
-        xxls: "2000px",
-        // => @media (min-width: 1536px) { ... }
-        
-        smx: { max: "639px" },
-        // => @media (max-width: 639px) { ... }
-        mdx: { max: "769px" },
-        // => @media (max-width: 639px) { ... }
-        range: { min: "768px", max: "1024px" },
-        // => @media (min-width: 1280px and max-width: 1535px
+        xsm: "340px",
+        sm: { max: "639px" },
+        md: { max: "769px" },
+        lg: { min: "770px", max: "1024px" },
+        xl: { min: "1025px" },
       },
       boxShadow: {
         Cs: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
