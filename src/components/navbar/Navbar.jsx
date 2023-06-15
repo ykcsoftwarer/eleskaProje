@@ -20,7 +20,22 @@ const Navbar = () => {
     { icon: <FiCheckCircle />, title: "Üye Ol", url: "/" },
   ];
   const navbarMenü = ["Hakkında", "Menü", "İletişim", "Giriş Yap", "Üye Ol"];
+  const navbarLinks = ["/about", "/menu", "/contact", "/login", "/signup"];
 
+  function renderLink(item) {
+    let link;
+
+    switch (item) {
+      case "hakkında":
+        link = "/about";
+        break;
+      case "Üye Ol":
+        link = "/signup";
+        break;
+      default:
+        link = "/";
+    }
+  }
   return (
     <>
       <nav className="sticky p-4 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap xsm:text-xs">
@@ -132,20 +147,31 @@ const Navbar = () => {
 
             <div className="flex items-center">
               <div className="flex gap-6 items-center">
-                <div className=" md:hidden lg:flex gap-6 text-white text-base  ">
-                  {navbarMenü.map((items, index) => (
+                <div className=" md:hidden lg:flex gap-6 text-white text-base xl:text-lg  ">
+                  {/* {navbarMenü.map((items, index) => (
                     <Link className="px-2">{items}</Link>
-                  ))}
+                  ))} */}
 
                   {/* <ul>
                     {navbarMenü.map((item, index) => (
                       <li key={index}>
-                        <a href={`/${item.toLowerCase().replace(" ", "-")}`}>
-                          {item}
-                        </a>
+                        {
+                          <Link to={`/${item.toLowerCase().replace(" ", "-")}`}>
+                            {renderLink}
+                          </Link>
+                        }
                       </li>
                     ))}
                   </ul> */}
+                  <ul className="flex">
+                    {navbarMenü.map((item, index) => (
+                      <li key={index}>
+                        <Link to={navbarLinks[index]} className="mr-4">
+                          {item}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <div className=" relative text-white  " role="button">

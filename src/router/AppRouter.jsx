@@ -1,15 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-import Header from "../components/header/Header";
 import Navbar from "../components/navbar/Navbar";
-import Orbit from "../components/pizza/Orbit";
-import Slider from "../components/pizza/slider/Slider";
-import Steps from "../components/header/Steps";
-import Connect from "../components/footer/Connect";
+import Home from "../pages/Home";
 import Footer from "../components/footer/Footer";
 import Menu from "../pages/Menu";
-import About from "../components/about/About";
-import Home from "../pages/Home";
+import About from "../pages/About";
 
 const AppRouter = () => {
   return (
@@ -18,7 +12,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
-        {/* <Route path="" element={}/>  */}
+        <Route path="/about" element={<About />} />
         {/* <Route path="" element={}/>  */}
         {/* <Header /> */}
         {/* <Menu /> */}
