@@ -2,7 +2,7 @@ import React from 'react'
 
 const deneme = () => {
   return (
-    <div>deneme</div>
+    <div>deneme 2  yi yapıyorum</div>
   )
 }
 
