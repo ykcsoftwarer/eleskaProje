@@ -20,7 +20,7 @@ const Navbar = () => {
     { icon: <FiCheckCircle />, title: "Üye Ol", url: "/" },
   ];
   const navbarMenü = ["Hakkında", "Menü", "İletişim", "Giriş Yap", "Üye Ol"];
-  const navbarLinks = ["/about", "/menu", "/contact", "/login", "/signup"];
+  const navbarLinks = ["/about", "/menu", "/contact", "/login", "/register"];
 
   function renderLink(item) {
     let link;
@@ -30,7 +30,7 @@ const Navbar = () => {
         link = "/about";
         break;
       case "Üye Ol":
-        link = "/signup";
+        link = "/registerg";
         break;
       default:
         link = "/";
