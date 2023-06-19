@@ -5,6 +5,7 @@ import Footer from "../components/footer/Footer";
 import Menu from "../pages/Menu";
 import About from "../pages/About";
 import MultiStepForm from "../components/stepper/MultiStepForm";
+import Error from "../components/not404/Error";
 
 const AppRouter = () => {
   return (
@@ -25,6 +26,7 @@ const AppRouter = () => {
         {/* <Slider /> */}
         {/* <About /> */}
         {/* <Connect /> */}
+        <Route path="*" element={<Error/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
