@@ -2,7 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className="bg-gray-950">
+    <section className="bg-gray-950 flex justify-center items-center ">
+      
       <div className="max-w-screen-xl px-4 py-4 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <div className="flex justify-center mt-8 space-x-6">
           <a href="#" className="text-gray-400 hover:text-gray-500">
@@ -47,8 +48,9 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="mt-8 text-base leading-6 text-center text-gray-400">
-          © 2021 SomeCompany, Inc. All rights reserved.
+        <p className="mt-8  text-sm leading-6 text-center text-gray-400">
+          Eleska Pizza Restaurantı. Her hakkı saklıdır. Kredi kartı bilgileriniz
+          256 bit SSl sertifikası ile korunmaktadır.
         </p>
       </div>
     </section>
