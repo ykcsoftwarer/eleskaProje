@@ -4,7 +4,7 @@ import Order from "../../helper/order.png"
 const Steps = () => {
   return (
     <div className="container mx-auto p-10">
-      <div className="flex justify-center flex-col sm:flex-row">
+      <div className="flex justify-center flex-row sm:flex-row">
 
 
         <div className=" basis-1/3  shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
@@ -24,7 +24,7 @@ const Steps = () => {
               Siparişini Oluştur
             </h5>
             <p>
-                En lezzetli yiycekler arasında seçtiklerini sepetine ekle. Sparişini tamamlamadan önce kampanyalara göz atmayı unutma!
+                En lezzetli yiyecekler arasında seçtiklerini sepetine ekle. Sparişini tamamlamadan önce kampanyalara göz atmayı unutma!
             </p>
           </div>
         </div>
