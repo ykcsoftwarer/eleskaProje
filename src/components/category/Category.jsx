@@ -2,7 +2,8 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Category = ({ slides }) => {
-  const image = "assest/homeGrid/335.jpg";
+  const image =
+    "https://www.tastingtable.com/img/gallery/why-you-should-always-knead-bread-dough-by-hand/l-intro-1652977262.jpg";
 
   return (
     <div className="w-full mt-10 ">
