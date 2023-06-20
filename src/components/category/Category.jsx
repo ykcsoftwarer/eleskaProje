@@ -6,7 +6,7 @@ const Category = ({ slides }) => {
 
   return (
     <div className="w-full mt-10 ">
-      <div className="md:w-[80%] lg:w-[66%] mx-auto ">
+      <div className="md:w-[90%] lg:w-[88%] mx-auto ">
         <div className="flex items-center justify-center mb-10 sm:flex-row gap-20">
           <div className=" items-center md:w-1/2 lg:w-1/3 p-2  w-1/2 ">
             <h3 className="font-semibold text-2xl leading-10 py-3">
