@@ -121,7 +121,7 @@
 
   .slider-card {
     @apply w-[250px]
-       h-[300px]
+       h-[250px]
        bg-white
        rounded-[10px]
        inline-block
