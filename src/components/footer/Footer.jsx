@@ -49,7 +49,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="mt-8  text-sm leading-6 text-center text-gray-400">
-          Eleska Pizza Restaurantı. Her hakkı saklıdır. Kredi kartı bilgileriniz
+          Eleska Pizza Restaurantı. Her hakkı saklıdır. <br /> Kredi kartı bilgileriniz
           256 bit SSl sertifikası ile korunmaktadır.
         </p>
       </div>
