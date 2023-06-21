@@ -121,7 +121,7 @@
 
   .slider-card {
     @apply w-[250px]
-       h-[300px]
+       h-[250px]
        bg-white
        rounded-[10px]
        inline-block
@@ -148,8 +148,8 @@
 /* Category Card style */
 
 .category-card {
-  @apply w-[300px]
-   h-[300px]
+  @apply w-[250px]
+   h-[250px]
    bg-white
    inline-block
    mx-[1rem];
