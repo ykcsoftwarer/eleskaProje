@@ -24,7 +24,7 @@ const Category = ({ slides }) => {
               </button>
             </Link>
           </div>
-          <div className="right sm:inline-block md:basis-1/2 lg:basis-1/3 flex justify-center sm:hidden ">
+          <div className="right sm\:inline-block md:basis-1/2 lg:basis-1/3 flex justify-center sm:hidden ">
             <img src={image} alt="" className="rounded-full w-60 h-60" />
           </div>
         </div>
