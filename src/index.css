@@ -253,7 +253,6 @@ input {
   color: white !important;
   border: solid 2px black !important;
 
-
 }
 
 
@@ -263,4 +262,11 @@ input {
   border: solid 2px black;
 
 
+}
+
+.md-position{
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important ;
+  transform: translate(-50%, -50%) !important;
 }
