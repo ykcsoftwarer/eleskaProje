@@ -224,3 +224,49 @@ input {
   > .ant-steps-item-title::after {
   background-color: red !important;
 }
+
+/********* Ant Modal ******/
+
+.ant-modal .ant-modal-content{
+  border-radius: 0% !important;
+  padding: 2.5rem !important;
+  border: solid 2px
+
+}
+
+.ant-modal-footer{
+  margin-top: 1.5rem !important;
+  margin-right: 2.3rem;
+}
+
+.ant-btn{
+  height: 38px !important;
+  padding: 8px 20px !important;
+  font-weight: bold;
+}
+.cancelBtn{
+  border: solid 1.8px;
+}
+
+.cancelBtn:hover{
+  background-color: #e12a32 !important;
+  color: white !important;
+  border: solid 2px black !important;
+
+}
+
+
+.okBtn:hover{
+  background-color: white !important;
+  color: #e12a32 !important;
+  border: solid 2px black;
+
+
+}
+
+.md-position{
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important ;
+  transform: translate(-50%, -50%) !important;
+}
