@@ -11,7 +11,25 @@ import { RxAvatar } from "react-icons/rx";
 import { CiGps } from "react-icons/ci";
 import { MdFavorite } from "react-icons/md";
 
+import { useState } from "react";
+import ExitModal from '../modals/ExitModal'
+
 const Navbar = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+
+
   const sideBarMenü = [
     { icon: <RxAvatar />, title: "Profile", url: "/" },
     { icon: <AiFillInfoCircle />, title: "Hakında", url: "/about" },
@@ -34,7 +52,7 @@ const Navbar = () => {
   ];
   const address=["Ev Adresi","İş Adresi", "İstanbul","Diğer"]
 
-  const currentUser = false;
+  const currentUser = true;
   return (
     <>
       <nav className="sticky p-4 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap xsm:text-xs">
@@ -190,7 +208,10 @@ const Navbar = () => {
                         />
                       </button>
                     </div>
-                    <div
+                    
+                  </>
+                )}
+                <div
                       className=" z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow "
                       id="dropdown-user"
                     >
@@ -234,18 +255,19 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li>
-                          <a
+                          <button
                             href="#"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
                             role="menuitem"
+                            type="button"
+                            onClick={showModal}
                           >
                             Sign out
-                          </a>
+                          </button>
+                          <ExitModal isModalOpen={isModalOpen} handleCancel={handleCancel} handleOk={handleOk} />
                         </li>
                       </ul>
-                    </div>{" "}
-                  </>
-                )}
+                    </div>
               </div>
             </div>
           </div>

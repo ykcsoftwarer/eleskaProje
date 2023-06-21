@@ -6,6 +6,7 @@ import Menu from "../pages/Menu";
 import About from "../pages/About";
 import MultiStepForm from "../components/stepper/MultiStepForm";
 import Error from "../components/not404/Error";
+import Campaign from "../pages/Campaign";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
         <Route path="/menu" element={<Menu />} />
         <Route path="/about" element={<About />} />
         <Route path="/register" element={ <MultiStepForm  />} />
+        <Route path="/campaigns" element={<Campaign/>}/>
         {/* <Route path="" element={}/>  */}
         {/* <Header /> */}
         {/* <Menu /> */}
