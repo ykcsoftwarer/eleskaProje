@@ -45,6 +45,7 @@ const DropDown = () => {
       items: [
         {
           id: `1`,
+          img: 'assest/pizzaimg/cheese-pita.jpg',
           name: "Peyaz Peynirli Pide",
           ingredients: "Mozzarella, beyaz peynir, tereyağ",
           price: "150 TL",
@@ -52,6 +53,7 @@ const DropDown = () => {
         {
           id: `2`,
           name: "Mozzarellalı, Yumurtalı Pide",
+          img: 'assest/pizzaimg/egg-pita.jpg',
           ingredients: "Mozzarella, yumurta, tereyağ",
           price: "120 TL",
         },
@@ -65,6 +67,7 @@ const DropDown = () => {
         {
           id: `1`,
           name: "Tavuk Izgara",
+          img: 'assest/pizzaimg/tvk-hero.jpg',
           ingredients: "Tavuk ızgara, karışık salata ve sos",
           price: "115 TL",
         },
@@ -103,8 +106,8 @@ const DropDown = () => {
       items: [
         {
           id: `1`,
-          name: "ouygfouyı",
-          ingredients: "Domates, mozzarella, kebap, kokteyl sos, kekik",
+          name: "Sezar Salata",
+          ingredients: "Domates, marul, tavuk, sos",
           price: "100 TL",
         },
       ],
@@ -163,7 +166,10 @@ const DropDown = () => {
         <h1 className=" my-8 text-3xl text-center font-extrabold">MENÜ</h1>
         {Categories.map((categori, index) => {
           return (
-            <div className="py-2 w-3/5  mx-auto " key={categori.id}>
+            <div
+              className="py-2   md:w-96 lg:w-10/12 xl:w-9/12  mx-auto "
+              key={categori.id}
+            >
               <div
                 className={`dropdown flex p-5 bg-gray-200 hover:bg-red-300 w-full  justify-between ${
                   showDropDown[index] ? "dropdown-open" : ""
@@ -198,7 +204,10 @@ const DropDown = () => {
                   <ul className="flex flex-wrap justify-between">
                     {categori.items.map((item) => {
                       return (
-                        <li key={item.id} className="w-1/2">
+                        <li
+                          key={item.id}
+                          className="w-1/2 flex flex-wrap md:w-full"
+                        >
                           <div className="flex mt-8 ">
                             <div>
                               <img
@@ -215,7 +224,6 @@ const DropDown = () => {
                                 {item.ingredients}
                               </p>
                               <p className="mt-6 font-bold text-red-600">
-                        
                                 {item.price}
                               </p>
                             </div>
