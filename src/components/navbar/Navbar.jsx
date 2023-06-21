@@ -208,7 +208,10 @@ const Navbar = () => {
                         />
                       </button>
                     </div>
-                    <div
+                    
+                  </>
+                )}
+                <div
                       className=" z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow "
                       id="dropdown-user"
                     >
@@ -264,9 +267,7 @@ const Navbar = () => {
                           <ExitModal isModalOpen={isModalOpen} handleCancel={handleCancel} handleOk={handleOk} />
                         </li>
                       </ul>
-                    </div>{" "}
-                  </>
-                )}
+                    </div>
               </div>
             </div>
           </div>
