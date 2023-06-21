@@ -1,27 +1,28 @@
 import React from "react";
 import Modal from "antd/es/modal/Modal";
 import Button from "antd/lib/button";
-import '../../index.css';
+import '../../index.css'
 
 const ExitModal = ({isModalOpen,handleCancel,handleOk}) => {
   return (
     <Modal
      width={"380px"}
-      className="text-center py-6 px-4 rounded-none bg-white h-60"
+      className="text-center md-position sm:p-0 py-6 px-4 rounded-none bg-white h-60 sm:h-44  "
       open={isModalOpen}
       onOk={handleOk}
       onCancel={handleCancel}
       footer={[
         <Button
-          className="cancelBtn rounded-none "
+          className="cancelBtn rounded-none sm:text-sm sm:mb-6"
           key="back"
           onClick={handleCancel}
         >
           İPTAL
         </Button>,
         <Button
-          className="okBtn bg-red-primary text-white rounded-none"
-          key="submit"
+          className="okBtn bg-red-primary text-white sm:w-22 rounded-none sm:text-sm "
+          key="link"
+          href="/"
           type="danger"
           onClick={handleOk}
         >
