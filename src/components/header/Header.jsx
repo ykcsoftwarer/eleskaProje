@@ -25,7 +25,7 @@ const Header = () => {
             MENÜ
           </button>
           <button
-            onClick={() => navigate("/menu")}
+            onClick={() => navigate("/campaigns")}
             className="w-40 font-extrabold tracking-widest  border-2 border-black  text-black p-2 px-3  hover:bg-black hover:text-white "
           >
             Kampanyalar
