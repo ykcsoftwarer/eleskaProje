@@ -12,10 +12,9 @@ import { CiGps } from "react-icons/ci";
 import { MdFavorite } from "react-icons/md";
 
 import { useState } from "react";
-import ExitModal from '../modals/ExitModal'
+import ExitModal from "../modals/ExitModal";
 
 const Navbar = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -27,8 +26,6 @@ const Navbar = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-
-
 
   const sideBarMenü = [
     { icon: <RxAvatar />, title: "Profile", url: "/" },
@@ -50,12 +47,12 @@ const Navbar = () => {
     { title: "Menü", url: "/menu" },
     { title: "İletişim", url: "/contact" },
   ];
-  const address=["Ev Adresi","İş Adresi", "İstanbul","Diğer"]
+  const address = ["Ev Adresi", "İş Adresi", "İstanbul", "Diğer"];
 
-  const currentUser = true;
+  const currentUser = false;
   return (
     <>
-      <nav className="sticky p-4 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap xsm:text-xs">
+      <nav className="fixed p-4 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap xsm:text-xs">
         <div className=" flex-wrap ">
           <div className="flex items-center justify-between  gap-2   ">
             <div className="flex items-center justify-start gap-x-6 ">
@@ -127,19 +124,17 @@ const Navbar = () => {
                     className="py-2 text-sm text-gray-700"
                     aria-labelledby="dropdownDefaultButton"
                   >
-                    
-                    {address.map((adres)=>(
-
-                    <li>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 hover:bg-gray-100 "
-                      >
-                        {adres}
-                      </a>
-                    </li>
+                    {address.map((adres,index) => (
+         
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 "
+                        >
+                          {adres}
+                        </a>
+                      </li>
                     ))}
-                    
                   </ul>
                 </div>
               </div>
@@ -208,71 +203,76 @@ const Navbar = () => {
                         />
                       </button>
                     </div>
-                    <div
-                      className=" z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow "
-                      id="dropdown-user"
-                    >
-                      <div className="px-4 py-3" role="none">
-                        <p className="text-sm text-gray-900 " role="none">
-                          Neil Sims
-                        </p>
-                        <p
-                          className="text-sm font-medium text-gray-900 truncate "
-                          role="none"
-                        >
-                          neil.sims@flowbite.com
-                        </p>
-                      </div>
-                      <ul className="py-1" role="none">
-                        <li>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
-                            role="menuitem"
-                          >
-                            Dashboard
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
-                            role="menuitem"
-                          >
-                            Settings
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
-                            role="menuitem"
-                          >
-                            Earnings
-                          </a>
-                        </li>
-                        <li>
-                          <button
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
-                            role="menuitem"
-                            type="button"
-                            onClick={showModal}
-                          >
-                            Sign out
-                          </button>
-                          <ExitModal isModalOpen={isModalOpen} handleCancel={handleCancel} handleOk={handleOk} />
-                        </li>
-                      </ul>
-                    </div>{" "}
                   </>
                 )}
+                <div
+                  className=" z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow "
+                  id="dropdown-user"
+                >
+                  <div className="px-4 py-3" role="none">
+                    <p className="text-sm text-gray-900 " role="none">
+                      Neil Sims
+                    </p>
+                    <p
+                      className="text-sm font-medium text-gray-900 truncate "
+                      role="none"
+                    >
+                      neil.sims@flowbite.com
+                    </p>
+                  </div>
+                  <ul className="py-1" role="none">
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                        role="menuitem"
+                      >
+                        Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                        role="menuitem"
+                      >
+                        Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                        role="menuitem"
+                      >
+                        Earnings
+                      </a>
+                    </li>
+                    <li>
+                      <button
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 "
+                        role="menuitem"
+                        type="button"
+                        onClick={showModal}
+                      >
+                        Sign out
+                      </button>
+                      <ExitModal
+                        isModalOpen={isModalOpen}
+                        handleCancel={handleCancel}
+                        handleOk={handleOk}
+                      />
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </nav>
-      {/* <div className="h-[99px]"></div> */}
+      <div className="h-[65px]"></div>
+
       <aside
         id="logo-sidebar"
         className="bg-[#E12A32] lg:hidden fixed smx:top-12 sm:top-10
