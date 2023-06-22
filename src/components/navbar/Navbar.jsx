@@ -49,10 +49,10 @@ const Navbar = () => {
   ];
   const address = ["Ev Adresi", "İş Adresi", "İstanbul", "Diğer"];
 
-  const currentUser = true;
+  const currentUser = false;
   return (
     <>
-      <nav className="sticky p-4 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap xsm:text-xs">
+      <nav className="fixed p-4 top-0 z-50 w-full bg-[#E12A32] border-b border-gray-200 flex-wrap xsm:text-xs">
         <div className=" flex-wrap ">
           <div className="flex items-center justify-between  gap-2   ">
             <div className="flex items-center justify-start gap-x-6 ">
@@ -125,6 +125,7 @@ const Navbar = () => {
                     aria-labelledby="dropdownDefaultButton"
                   >
                     {address.map((adres,index) => (
+         
                       <li>
                         <a
                           href="#"
@@ -270,7 +271,8 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      {/* <div className="h-[99px]"></div> */}
+      <div className="h-[65px]"></div>
+
       <aside
         id="logo-sidebar"
         className="bg-[#E12A32] lg:hidden fixed smx:top-12 sm:top-10

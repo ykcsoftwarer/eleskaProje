@@ -7,17 +7,17 @@ import Slider from "./slider/Slider";
 
 const Orbit = ({ radius }) => {
   const menu = [
-    { title: "Pizza 1" },
-    { title: "Pizza 2" },
-    { title: "Pizza 3" },
-    { title: "Pizza 4" },
-    { title: "Pizza 5" },
-    { title: "Pizza 6" },
-    { title: "Pizza 7" },
-    { title: "Pizza 8" },
-    { title: "Pizza 9" },
-    { title: "Pizza 10" },
-    { title: "Pizza 11" },
+    { title: "Pizza Porcini" },
+    { title: "Pizza Calzone" },
+    { title: "Pizza Toscana" },
+    { title: "Pizza Capricciosa" },
+    { title: "Pizza Crevetten" },
+    { title: "Pizza Rusticana" },
+    { title: "Pizza Vesuvio" },
+    { title: "Pizza Frutti Di Mare" },
+    { title: "Pizza Bistro" },
+    { title: "Pizza Padrone" },
+    { title: "Pizza Bella" },
   ];
   const [orbits] = useState(() =>
     Array.from({ length: menu.length }, (_, index) => {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Category = ({ slides }) => {
   const image =
     "https://www.tastingtable.com/img/gallery/why-you-should-always-knead-bread-dough-by-hand/l-intro-1652977262.jpg";
-
+  // const red = "img/red.jpg";
   return (
     <div className="w-full mt-10 ">
       <div className="md:w-[90%] lg:w-[88%] mx-auto ">
@@ -14,7 +14,7 @@ const Category = ({ slides }) => {
               Zengin Kategoriler
             </h3>
             <p className="leading-7 py-5">
-              Geniş menümüzle herkesindamak zevkine düşkünseçenekler bulunur.
+              Geniş menümüzle herkesin damak zevkine düşkün seçenekler bulunur.
               Özenle seçilmiş, şeflerimiz tarafından hazırlanan özel
               tariflerimizi deneyin.
             </p>
@@ -25,13 +25,21 @@ const Category = ({ slides }) => {
             </Link>
           </div>
           <div className="right sm\:inline-block md:basis-1/2 lg:basis-1/3 flex justify-center sm:hidden ">
-            <img src={image} alt="" className="rounded-full w-60 h-60" />
+            {/* <img src={red} alt="" className="" /> */}
+            <img
+              src={image}
+              alt=""
+              className=" rounded-full w-60 h-60 object-cover"
+            />
           </div>
         </div>
-        <div className="flex justify-center flex-wrap">
+        <div className="flex justify-center flex-wrap md:w-[90%] xl:w-[80%] mx-auto">
           {slides.map((slide, index) => {
             return (
-              <div className="category-card grid" key={index}>
+              <div
+                className="category-card grid md:w-[90%] lg:w-[88%] mx-auto"
+                key={index}
+              >
                 <a href="#">
                   <div
                     className="category-card-image"
