@@ -161,7 +161,7 @@ const DropDown = () => {
     setShowDropDown(newShowDropdown);
   };
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center ">
       <div className="container ">
         <h1 className=" my-8 text-3xl text-center font-extrabold">MENÜ</h1>
         {Categories.map((categori, index) => {

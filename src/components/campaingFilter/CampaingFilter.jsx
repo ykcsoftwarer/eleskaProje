@@ -34,14 +34,16 @@ const CampaignFilter = () => {
         <div className="p-3 space-y-1 text-sm text-black">
           <div>
             <h5 className="text-center">KATEGORİ</h5>
-            {kategori.map((item) => (
-              <div className="flex py-3 rounded hover:bg-[#e12a3368] ">
+            {kategori.map((item, index) => (
+              <div
+                className="flex py-3 rounded hover:bg-[#e12a3368] "
+                key={index}
+              >
                 <div className="flex items-center h-5 px-2">
                   <input
                     id="helper-radio-4"
                     name="helper-radio"
                     type="radio"
-                    
                     className="w-4 h-4  text-[#E12A32] bg-gray-100 border-gray-300  appearance-none rounded-full checked:bg-red-500  "
                   />
                 </div>
@@ -62,7 +64,7 @@ const CampaignFilter = () => {
               </div>
             ))}
           </div>
-<div className=" border-b-2 border-gray-300"></div>
+          <div className=" border-b-2 border-gray-300"></div>
           <div className="py-3">
             <h5 className="text-center">Fiyat</h5>
             <input
@@ -95,14 +97,13 @@ const CampaignFilter = () => {
                   onClick={() => handleClick(button.id)}
                   className="w-24 text-black font-bold py-2 px-3 rounded  "
                 >
-                 {button.title}
+                  {button.title}
                 </button>
               ))}
             </div>
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

@@ -11,6 +11,7 @@ const Card = ({slides}) => {
         slider.scrollLeft = slider.scrollLeft + 500
     }
   return (
+    
     <div id="main-slider-container">
         <MdChevronLeft size={40} className="slider-icon left" onClick={sliderLeft} />
 

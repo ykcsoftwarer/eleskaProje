@@ -14,7 +14,7 @@ const Campaign = () => {
         {/* CARD COMPONENTS */}
         <div className="flex gap-4 flex-wrap justify-center items-center">
           {campaign.map((item, index) => (
-            <CampaignCard item={item} />
+            <CampaignCard item={item} key={index} />
           ))}
         </div>
       </div>

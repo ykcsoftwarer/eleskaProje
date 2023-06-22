@@ -17,7 +17,7 @@ const Modal = ({ menu }) => {
           id="defaultModal"
           tabIndex="-1"
           aria-hidden="true"
-          className="fixed z-50 items-center flex justify-center overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          className="fixed z-50 items-center flex justify-center overflow-x-hidden overflow-y-auto inset-0 h-[calc(100%-1rem)] max-h-full"
         >
           <div className="relative w-1/4 max-w-2xl max-h-full">
             {/* Modal content */}
