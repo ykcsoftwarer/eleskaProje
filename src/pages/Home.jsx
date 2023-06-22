@@ -7,11 +7,13 @@ import HomeCategory from "../components/category/Home";
 import Orbit from "../components/pizza/Orbit";
 import Slider from "../components/pizza/slider/Slider";
 import Connect from "../components/footer/Connect";
+import CampaignSlider from "../components/campaignSlider/CampaignSlider";
 const Home = () => {
   return (
     <>
       <Header />
       <Menü />
+      <CampaignSlider/>
       <HomeCategory />
       <Steps />
       <Orbit radius={400} />

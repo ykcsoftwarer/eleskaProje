@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const DropDown = () => {
+  const [animationParent] = useAutoAnimate()
   const Categories = [
     {
       id: "1",
@@ -161,22 +163,22 @@ const DropDown = () => {
     setShowDropDown(newShowDropdown);
   };
   return (
-    <div className="flex justify-center">
-      <div className="container ">
+    <div className="flex justify-center min-h-screen " >
+      <div className="container "  >
         <h1 className=" my-8 text-3xl text-center font-extrabold">MENÜ</h1>
         {Categories.map((categori, index) => {
           return (
             <div
               className="py-2   md:w-96 lg:w-10/12 xl:w-9/12  mx-auto "
-              key={categori.id}
+              key={categori.id} 
             >
-              <div
+              <div 
                 className={`dropdown flex p-5 bg-gray-200 hover:bg-red-300 w-full  justify-between ${
                   showDropDown[index] ? "dropdown-open" : ""
                 }`}
                 onClick={() => toggleDropdown(index)}
               >
-                <div className="flex gap-3 place-items-center">
+                <div className="flex gap-3 place-items-center" >
                   <img src={categori.img} alt="" className="w-8 h-8" />
                   <h2 className="font-bold text-lg tracking-wide">
                     {categori.name}
@@ -199,7 +201,7 @@ const DropDown = () => {
                   </svg>
                 </div>
               </div>
-              <div>
+              <div ref={animationParent}>
                 {categori.items && showDropDown[index] && (
                   <ul className="flex flex-wrap justify-between">
                     {categori.items.map((item) => {

@@ -124,7 +124,8 @@ const Navbar = () => {
                     className="py-2 text-sm text-gray-700"
                     aria-labelledby="dropdownDefaultButton"
                   >
-                    {address.map((adres) => (
+                    {address.map((adres,index) => (
+         
                       <li>
                         <a
                           href="#"
